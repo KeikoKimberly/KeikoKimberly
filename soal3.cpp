@@ -12,7 +12,7 @@ void printMiddle(Node *head) {
     int count = 0; 
     Node *mid = head; 
   
-    while (head != NULL) { 
+    while (head!=NULL) { 
         // update mid, when count is odd number
         if (count & 1) 
             mid = mid->next; 
