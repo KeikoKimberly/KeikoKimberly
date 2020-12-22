@@ -35,7 +35,7 @@ Node *merge(Node *h1,Node *h2){
         h2->next = merge(h1, h2->next); 
         return h2; 
     } 
-} 
+}
   
 int main() { 
     Node *head1 = createNode(1); 
