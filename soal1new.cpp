@@ -1,23 +1,19 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-
-
 struct Node{ 
     int num; 
     Node* next; 
 }; 
   
 // Function to create newNode in a linkedlist 
-Node* newNode(int key) 
-{ 
-    struct Node* temp = (Node*)malloc(sizeof(Node)); 
-    temp->num = key; 
-    temp->next = NULL; 
-    return temp; 
+Node *createNode(int key){ 
+    Node *newNode = (Node*)malloc(sizeof(Node)); 
+    newNode->num = key; 
+    newNode->next = NULL; 
+    return newNode; 
 } 
-  
-// A utility function to print linked list 
+
 void printLinkedList(Node *curr) 
 { 
     while (curr!=NULL){ 
@@ -41,22 +37,20 @@ Node *merge(Node *h1,Node *h2){
     } 
 } 
   
-// Driver program 
-int main() 
-{ 
-    Node *head1 = newNode(1); 
-    head1->next = newNode(4); 
-    head1->next->next = newNode(5); 
+int main() { 
+    Node *head1 = createNode(1); 
+    head1->next = createNode(4); 
+    head1->next->next = createNode(5); 
   
     // 1->4->5 LinkedList
   
-    Node *head2 = newNode(0); 
-    head2->next = newNode(2); 
-    head2->next->next = newNode(6); 
+    Node *head2 = createNode(0); 
+    head2->next = createNode(2); 
+    head2->next->next = createNode(6); 
   
     // 0->2->6 LinkedList 
   
-    Node* mergedhead = merge(head1, head2); 
+    Node *mergedhead = merge(head1, head2); 
   
     printLinkedList(mergedhead); 
     return 0; 

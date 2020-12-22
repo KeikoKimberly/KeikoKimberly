@@ -24,7 +24,6 @@ void pushTail(const char *name, int score){
   } else { // >= 1 node
   tail->next = temp; //tail lama -> next adalah node baru
   tail = temp; //temp akan menjadi tail (node terakhir)
-
   }
 }
 
@@ -43,7 +42,7 @@ void printLinkedList(){
   Node *curr = head; //curr adalah index yg akan berjalan
 
   while(curr){ //selama curr masih ada while(curr) == selama curr bukan NULL
-    printf("%s -> ",curr->name); //print data
+    printf("%s %d-> ",curr->name,curr->score); //print data
     curr=curr->next; //curr akan berjalan ke node selanjutnya
   }
 }
@@ -78,15 +77,15 @@ void popTail(){
 
 int main(){
   //A5 -> B7 -> C9
-  pushHead("Darnell",95);
   pushTail("whisper",97);
+  pushHead("Darnell",95);
   pushHead("pai",100);
   pushHead("Roma",98);
   //popHead();
   //popTail();
   //popTail();
   //popHead();
-  //pushTail("vincent",94);
+  pushTail("vincent", 94);
   //pushTail("denny",93);
   printLinkedList();
 
