@@ -44,6 +44,6 @@ int main() {
     if (detectLoop(head))
         printf("Loop found");
     else
-        printf("No Loop");
+        printf("No Loop\n");
     return 0;
 }
