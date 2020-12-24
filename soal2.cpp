@@ -42,7 +42,7 @@ int main() {
     head->next->next->next->next = head;
  
     if (detectLoop(head))
-        printf("Loop found");
+        printf("Loop found\n");
     else
         printf("No Loop\n");
     return 0;
